@@ -1,0 +1,67 @@
+.hero {
+  width: 100%;
+  padding: 90px 10px;
+  background-image: url("../../assets/бг.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom-right-radius: 36px;
+  border-bottom-left-radius: 36px;
+  color: white;
+
+  .hero__texts {
+    text-align: center;
+  }
+
+  .hero__wrapper-holder {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;  
+  }
+
+  .hero__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 50px;
+    overflow: auto;
+    width: 100%;         
+    max-width: 1200px;  
+    padding-bottom: 10px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hero__mini {
+      flex: 0 0 auto;
+      min-width: 200px;
+      display: flex;
+      align-items: center;
+
+      .mini__texts {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 970px) {
+    border-radius: 0;
+
+    .hero__wrapper {
+      gap: 20px;
+
+      .hero__mini {
+        min-width: 150px;
+      }
+    }
+  }
+}

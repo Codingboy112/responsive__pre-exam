@@ -1,0 +1,171 @@
+.avtopark {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 90px;
+  .topper__texts__div {
+    display: flex;
+    gap: 40px;
+    .header__title {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 62px;
+    }
+    .header__btn {
+      width: 150px;
+      height: 50px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 2px solid black;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: transparent;
+    }
+  }
+  .avtopark__filter {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    overflow: scroll;
+    .avtopark__btn {
+      padding: 14px 20px 14px 45px;
+      margin-bottom: 20px;
+      background-color: transparent;
+      border: none;
+      border-radius: 5px;
+      font-weight: 700;
+      flex: 0 0 200px;
+      min-width: 150px;
+      max-width: 210px;
+
+      transition: all 0.1s;
+      .small__car__img {
+        width: 30px;
+        margin-left: -20px;
+        margin-right: 10px;
+      }
+    }
+
+    .avtopark__btn--black {
+      background-color: black;
+      color: white;
+    }
+    .avtopark__btn:hover {
+      background-color: #eaeaea;
+      color: black;
+    }
+  }
+  .avtopark__filter::-webkit-scrollbar {
+    display: none;
+  }
+  .cars__wrapper {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    .car__card {
+      padding: 50px;
+      position: relative;
+      .car__img {
+        width: 100%;
+      }
+      .absolute__btn {
+        position: absolute;
+        top: 24px;
+        right: 34px;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-weight: 500;
+      }
+      .informations {
+        gap: 4px;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px 0px;
+        .information {
+          display: flex;
+          gap: 10px;
+          p {
+            font-family: "Anek Tamil", sans-serif;
+          }
+        }
+      }
+      .cars__small-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        .cars__view__btn {
+          padding: 10px 20px;
+          background: linear-gradient(67.38deg, #9f7437 9.19%, #e3d293 92.03%);
+          border-radius: 5px;
+          border: none;
+          font-weight: 600;
+          color: white;
+        }
+        .cars__price {
+          font-size: small;
+        }
+        .cars__price--big {
+          font-size: 20px;
+        }
+      }
+    }
+    .car__card:hover {
+      background-color: #eaeaea;
+      border-radius: 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1272px) {
+  .avtopark{
+    .cars__wrapper{
+      .car__card:nth-child(9){
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 837px) {
+  .avtopark{
+    .cars__wrapper{
+      .car__card:nth-child(8){
+        display: none;
+      }
+      .car__card:nth-child(7){
+        display: none;
+      }
+      .car__card:nth-child(6){
+        display: none;
+      }
+      .car__card:nth-child(5){
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .avtopark {
+    .topper__texts__div {
+      .header__title {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .avtopark {
+    .topper__texts__div {
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 50px;
+    }
+  }
+}
+

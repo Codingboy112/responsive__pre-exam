@@ -1,4 +1,7 @@
-
+.main__container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
 .header {
   padding: 20px 70px;
   background-color: #181818;
@@ -21,7 +24,7 @@
         border-radius: 4px;
         font-weight: 600;
         font-size: 14px;
-      
+
         i {
           color: rgb(255, 223, 39);
           font-size: 14px;
@@ -70,36 +73,41 @@
     font-weight: 600;
     margin-right: 50px;
   }
-.header__btn {
-  width: 50px;
-  height: 50px;
-  background-color: black;
-  padding: 14px;
-  border-radius: 50%;
-  position: relative;
+  .header__btn {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    padding: 14px;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .car__link {
+    position: relative;
+  }
+
+  .car__link::before {
+    content: "1";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    color: black;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
 }
 
-.car__link{
-  position: relative;
-}
-
-
-.car__link::before {
-  content: "1";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: red;
-  color: black;
-  font-size: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-}
+@media only screen and (max-width: 1600px) {
+  .main__container {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -123,7 +131,7 @@
   .header {
     .header__wrapper {
       .header__logo {
-        .location__btn{
+        .location__btn {
           display: none;
         }
       }
@@ -149,6 +157,24 @@
       .header__order {
         .header__call {
           display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .header{
+    .header__wrapper{
+      .header__logo{
+        .main__logo{
+        width: 120px;
+        margin-top: -60px;
+      }
+      }
+      .header__order{
+        .car__link{
+         display: none;
         }
       }
     }
